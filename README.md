@@ -1,8 +1,15 @@
 Export Images
 ==============
 
+[fileserver]: https://github.com/polopolyps/fileserver "Fileserver"
+[greenfield-online]: https://github.com/atex-polopoly/greenfield-online "Greenfield online"
+
 Example PCMD tool for exporting image file data into an external file
-server.
+server. This tool will have to be modified in order to use with
+something other then a vanilla [greenfield-online][] using [fileserver][].
+
+**This tool is destructive without ability to revert changes, backup
+  the database before attempting to use it.**
 
 Run:
 
