@@ -8,10 +8,10 @@ Export Images
 http://dev.mysql.com/doc/refman/5.6/en/innodb-data-log-reconfiguration.html
 "Mysql documentation"
 
-Example [pcmd][] tool for exporting image file data into an external file
-server. This tool will have to be modified in order to use with
-something other than a vanilla [greenfield-online][] using
-[fileserver][] as external image database.
+Example [pcmd][] tool for exporting image file data into an external
+file server. This tool is meant to be an example and will have to be
+modified in order to use with something other than a vanilla
+[greenfield-online][] using [fileserver][] as external image database.
 
 **This tool is destructive without ability to revert changes, backup
    the database before attempting to use it.**
@@ -21,6 +21,11 @@ be reclaimed, but since MYSQL never releases storage by default you
 will have to manually prune the database after the extraction (eg
 export the database, drop it, and then import it again, see the
 [mysql documentation][] for more information).**
+
+**This tool will have to be modified for workflowed content to approve
+the new version otherways all public versions are likely to be removed
+when old versions are trimmed.**
+
 
 ### Installation
 
