@@ -3,21 +3,24 @@ Export Images
 
 [fileserver]: https://github.com/polopolyps/fileserver "Fileserver"
 [greenfield-online]: https://github.com/atex-polopoly/greenfield-online "Greenfield online"
+[pcmd]: https://github.com/polopolyps/pcmd "pcmd"
 
-Example PCMD tool for exporting image file data into an external file
+Example [pcmd][] tool for exporting image file data into an external file
 server. This tool will have to be modified in order to use with
-something other than a vanilla [greenfield-online][] using [fileserver][].
+something other than a vanilla [greenfield-online][] using
+[fileserver][] as external image database.
 
 **This tool is destructive without ability to revert changes, backup
   the database before attempting to use it.**
 
-Run:
+To see the available parameters, run:
 
     pcmd help export-images
 
-to see the available parameters.
+Example Usage
+-------------
 
-Example Usage:
+To extract ids for all images using "example.Image" as input-template run:
 
     pcmd search --inputtemplate=example.Image | pcmd extract-images
 
