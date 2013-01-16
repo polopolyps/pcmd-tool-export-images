@@ -13,12 +13,14 @@ something other than a vanilla [greenfield-online][] using
 **This tool is destructive without ability to revert changes, backup
   the database before attempting to use it.**
 
-To see the available parameters, run:
+### Installation
 
-    pcmd help export-images
+Just put the jar file on the classpath of [pcmd][], and you should be
+good to go. Verify installation by running:
 
-Example Usage
--------------
+     pcmd help export-images
+
+### Example Usage
 
 To extract ids for all images using "example.Image" as input-template run:
 
