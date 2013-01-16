@@ -4,6 +4,9 @@ Export Images
 [fileserver]: https://github.com/polopolyps/fileserver "Fileserver"
 [greenfield-online]: https://github.com/atex-polopoly/greenfield-online "Greenfield online"
 [pcmd]: https://github.com/polopolyps/pcmd "pcmd"
+[mysql documentation]:
+http://dev.mysql.com/doc/refman/5.6/en/innodb-data-log-reconfiguration.html
+"Mysql documentation"
 
 Example [pcmd][] tool for exporting image file data into an external file
 server. This tool will have to be modified in order to use with
@@ -11,7 +14,13 @@ something other than a vanilla [greenfield-online][] using
 [fileserver][] as external image database.
 
 **This tool is destructive without ability to revert changes, backup
-  the database before attempting to use it.**
+   the database before attempting to use it.**
+
+**This tool will remove old versions of the content to allow space to
+be reclaimed, but since MYSQL never releases storage by default you
+will have to manually prune the database after the extraction (eg
+export the database, drop it, and then import it again, see the
+[mysql documentation][] for more information).**
 
 ### Installation
 
