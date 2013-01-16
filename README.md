@@ -6,7 +6,7 @@ Export Images
 
 Example PCMD tool for exporting image file data into an external file
 server. This tool will have to be modified in order to use with
-something other then a vanilla [greenfield-online][] using [fileserver][].
+something other than a vanilla [greenfield-online][] using [fileserver][].
 
 **This tool is destructive without ability to revert changes, backup
   the database before attempting to use it.**
