@@ -15,8 +15,11 @@ something other than a vanilla [greenfield-online][] using
 
 ### Installation
 
-Just put the jar file on the classpath of [pcmd][], and you should be
-good to go. Verify installation by running:
+    mvn clean install
+
+Will produce a jar file in the target directory, just put the jar file
+on the classpath of [pcmd][], and you should be good to go. Verify
+installation by running:
 
      pcmd help export-images
 
