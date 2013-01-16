@@ -11,30 +11,30 @@ import com.polopoly.util.client.PolopolyContext;
 
 public class ExportImagesParameters extends ContentIdListParameters
 {
-    private URI fileService;
-    { 
+    private URI fileServerUrl;
+    {
         try {
-            fileService = new URI("http://localhost:8080/fileserver/file/");
+            fileServerUrl = new URI("http://localhost:8080/fileserver/file/");
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public URI getFileService() {
-        return fileService;
+    public URI getFileServerUrl() {
+        return fileServerUrl;
     }
 
-    public void setFileService(URI fileServerUrl) {
-        this.fileService = fileServerUrl;
+    public void setFileServerUrl(URI fileServerUrl) {
+        this.fileServerUrl = fileServerUrl;
     }
 
     @Override
     public void parseParameters(Arguments args, PolopolyContext context) throws ArgumentException
     {
-        String url = args.getOptionString("fileServer", null);
+        String url = args.getOptionString("fileServerUrl", null);
         try {
             if (url != null) {
-                fileService = new URI(url);
+                fileServerUrl = new URI(url);
             }
         } catch (URISyntaxException e) {
             throw new ArgumentException(url + " is not a valid URI", e);
@@ -45,7 +45,7 @@ public class ExportImagesParameters extends ContentIdListParameters
     @Override
     public void getHelp(ParameterHelp help)
     {
-        help.addOption("fileServerUrl", null, "The file server url");
+        help.addOption("fileServerUrl", null, "Fileserver url for uploading images");
         super.getHelp(help);
     }
 }

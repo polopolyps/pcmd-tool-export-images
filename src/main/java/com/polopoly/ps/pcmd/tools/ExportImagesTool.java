@@ -38,7 +38,7 @@ public class ExportImagesTool implements Tool<ExportImagesParameters> {
     @Override
     public void execute(PolopolyContext context, ExportImagesParameters params) throws FatalToolException
     {
-        URI uri = params.getFileService();
+        URI uri = params.getFileServerUrl();
         for (ContentId id : params) {
             try {
                 handle(context, uri, id);
