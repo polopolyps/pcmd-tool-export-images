@@ -13,6 +13,11 @@ file server. This tool is meant to be an example and will have to be
 modified in order to use with something other than a vanilla
 [greenfield-online][] using [fileserver][] as external image database.
 
+Once exported the image content will be updated to contain a http
+image referencing the image in the external [fileserver][], all older
+versions of the image content will be removed deleting the image from
+the polopoly database in the process.
+
 **This tool is destructive without ability to revert changes, backup
    the database before attempting to use it.**
 
