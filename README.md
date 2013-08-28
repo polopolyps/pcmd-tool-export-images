@@ -37,7 +37,7 @@ when old versions are trimmed.**
     mvn clean install
 
 Will produce a jar file in the target directory, just put the jar file
-on the classpath of [pcmd][], and you should be good to go. Verify
+on the classpath of [pcmd][] (see the "HOW TO ADD CUSTOM TOOL" section of the pcmd README), and you should be good to go. Verify
 installation by running:
 
      pcmd help export-images
